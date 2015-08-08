@@ -30,7 +30,7 @@
 							} );
 
 
-							$('#gate').on( 'click', function() {
+							$('#gate, figcaption').on( 'click', function() {
 
 								slitslider.next();								
 
@@ -131,7 +131,7 @@
             					shares: ["email", "twitter", "facebook", "googleplus", "linkedin"]
         					});	
 
-						    $('#lastPic').click(function() {
+						    $('#lastPic, figcaption').click(function() {
 								slitslider.next();
 								$('.timbreKey').hide();
 					        	$('#timbreExampleKey').show();
@@ -502,7 +502,7 @@
 
 						    		//Timbre 1
 						            "1_1C": new Howl({
-						                urls: [ "../media/1_1C.mp3" ]
+						                urls: [ "../media/1_1C.mp3" ],
 						            }),
 						            "1_1Cs": new Howl({
 						                urls: [ "../media/1_1Cs.mp3" ]
@@ -964,6 +964,7 @@
 						                selectTimbre = $(this).children().eq(1).attr("class");
 						                $(".timbreKey").hide();
         								$("#"+selectTimbre+"Key").show();
+
         								$(window).bind("keydown keyup", function(ev) {
 						       
 						                    var keyNo = ev.which,
@@ -984,8 +985,8 @@
 							        		);
 						        		});
 
-
 						            });
+
 						        } else {
 						            $(".chkbox").click(function () {
 						                

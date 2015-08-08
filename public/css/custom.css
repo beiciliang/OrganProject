@@ -1,3 +1,4 @@
+
 .demo-1 .sl-slider-wrapper {
 	position: absolute;
 	width: 100%;
@@ -14,7 +15,7 @@
 	border: 5px inset rgba(216, 108, 77, 0.4);
 	border-radius: 0%;
 	position: absolute;
-	bottom: 50%;
+	bottom: 53%;
 	left: 50%;
 	margin: 0 0 0 -230px;
 	overflow: hidden;
@@ -41,12 +42,12 @@
 	text-align: center;
 	line-height: 50px;
 	bottom: 50%;
-	margin: 0 0 -120px 0;
+	margin: 0 0 -70px 0;
 }
 
 .demo-1 .bg-2 blockquote {
 	position: absolute;
-	width: 100%;
+	width: 600px;
 	text-align: center;
 	left: 0;
 	font-weight: 400;
@@ -55,15 +56,16 @@
 	height: 70px;
 	color: #8b8b8b;
 	z-index: 2;
+  left: 50%;
 	bottom: 50%;
-	margin: 0 0 -200px 0;
+	margin: 0 0 -130px -300px;
 	padding: 0;
 }
 
 .demo-1 .bg-2 blockquote p{
 	margin: 0 auto;
-	width: 60%;
-	max-width: 400px;
+	/*width: 60%;*/
+	/*max-width: 400px;*/
 	position: relative;
 	text-align: justify;
 }
@@ -85,12 +87,23 @@
 
 .demo-1 .bg-2 blockquote address {
 	font-size: 10px;
-	padding-top: 10px;
+	padding-top: 20px;
 	display: inline-block;
 	font-style: normal;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 }
+
+.demo-1 .bg-2 blockquote address a:link, 
+.demo-1 .bg-2 blockquote address a:visited { 
+color:#8b8b8b; 
+text-decoration:none; 
+} 
+.demo-1 .bg-2 blockquote address a:hover, 
+.demo-1 .bg-2 blockquote address a:active { 
+color:rgba(230, 145, 23, 0.9); 
+text-decoration:underline; 
+} 
 
 
 /* Content elements for the second slide */
@@ -164,6 +177,7 @@
 .labels p {
     display: none;
 }
+
 .labels a {
     background-color: rgba(230, 145, 23, 0.8);
     color: #FFFFFF;
@@ -181,6 +195,7 @@
     -webkit-border-radius: 40px;
     border-radius: 40px;
 }
+
 .labels > a {
     background-color: rgba(230, 145, 23, 0.8);
 
@@ -193,6 +208,7 @@
 .labels a:hover {
     background-color: rgba(128, 128, 128, 0.8);
 }
+
 .labels a span {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -221,6 +237,7 @@
     top: 260px;
 }
 #label3 {
+
     left: 590px;
     top: 431px;
 }
@@ -536,12 +553,12 @@
   	text-shadow: 0 0 1px #000;
   	padding: 20px;
   	position: absolute;
-  	font-size: 17px;
+  	font-size: 22px;
   	font-weight: 700;
   	letter-spacing: 3px;
   	text-transform: uppercase;
   	/* width: 80%; */
-  	left: 40%;
+  	left: 42%;
   	text-align: center;
   	line-height: 40px;
   	top: 5%;
@@ -558,7 +575,7 @@
   	height: 70px;
   	color: #8b8b8b;
   	z-index: 2;
-  	top: 35%;
+  	top: 25%;
   	padding: 0;
 }
 
@@ -597,14 +614,14 @@
 
 .demo-1 .bg-1 blockquote img{
   	display: block;
-  	max-width: 30%;
-  	margin-left: 420px;
+  	max-width: 20%;
+  	margin-left: 475px;
   	padding-top: 20px;
 }
 
 .demo-1 .bg-1 #share { 
 	margin-left: 420px; 
-	padding-top: 90px; 
+	padding-top: 70px; 
 	z-index: 100; 
 }
 
@@ -744,6 +761,21 @@ figure.effect-apollo {
 	color: #222;
 }
 
+.demo-1 .bg-1 blockquote p a:link{
+font-weight:bold;
+color: #fff;
+text-decoration:none; 
+} 
+.demo-1 .bg-1 blockquote p a:visited { 
+color:#8b8b8b; 
+text-decoration:none; 
+} 
+.demo-1 .bg-1 blockquote p a:hover, 
+.demo-1 .bg-1 blockquote p a:active { 
+color:rgba(230, 145, 23, 0.9); 
+text-decoration:underline; 
+} 
+
 /* Animations for content elements */
 
 .sl-trans-elems .deco{
@@ -812,39 +844,4 @@ figure.effect-apollo {
 
 /* Media Queries for custom slider */
 
-@media screen and (max-width: 660px) {
-	.demo-1 .deco {
-		width: 130px;
-		height: 130px;
-		margin-left: -65px;
-		margin-bottom: 50px;
-	}
 
-	.deco figure {
-		display: inline-block;
-		float: none;
-		margin: 10px auto;
-		width: 100%;
-	}
-
-	.demo-1 .sl-slide blockquote {
-		margin-bottom: -120px;
-	}
-
-	.demo-1 .sl-slide h2 {
-		line-height: 22px;
-		font-size: 18px;
-		margin-bottom: -40px;
-		letter-spacing: 8px;
-	}
-
-	.demo-1 .sl-slide blockquote p:before {
-		line-height: 10px;
-		width: 40px;
-		height: 40px;
-		font-size: 120px;
-		left: -45px;
-	}
-
-
-}
