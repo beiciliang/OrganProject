@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+
+\bibitem{audiotool}
+Audiotool.
+\newblock \url{http://www.audiotool.com}.
+
+\bibitem{theOrchestra}
+The orchestra.
+\newblock \url{http://orchestra.touchpress.com}.
+
+\bibitem{taiko}
+Taiko no tatsujin.
+\newblock \url{http://taiko-ch.net}.
+
+\bibitem{bates2002web}
+Chris Bates.
+\newblock {\em Web Programming Building Internet Applications}.
+\newblock John Wiley \& Sons, 2002.
+
+\bibitem{bos1998cascading}
+Bert Bos, H{\aa}kon~Wium Lie, Chris Lilley, and Ian Jacobs.
+\newblock Cascading style sheets, level 2 css2 specification, 1998.
+
+\bibitem{chapman2007web}
+Nigel Chapman and Jenny Chapman.
+\newblock {\em Web design: a complete introduction}.
+\newblock John Wiley \& Sons, 2007.
+
+\bibitem{firtman2010programming}
+Maximiliano Firtman.
+\newblock {\em Programming the mobile web}.
+\newblock " O'Reilly Media, Inc.", 2010.
+
+\bibitem{goodman2007javascript}
+Danny Goodman.
+\newblock {\em JavaScript bible}.
+\newblock John Wiley \& Sons, 2007.
+
+\bibitem{gouzouasis2011future}
+Peter Gouzouasis and Danny Bakan.
+\newblock The future of music making and music education in a transformative
+  digital world.
+\newblock {\em The University of Melbourne refereed e-journal}, 2, 2011.
+
+\bibitem{london2011unlocking}
+Manuel London and MJ~Hall.
+\newblock Unlocking the value of web 2.0 technologies for training and
+  development: The shift from instructor-controlled, adaptive learning to
+  learner-driven, generative learning.
+\newblock {\em Human Resource Management}, 50(6):757--775, 2011.
+
+\bibitem{nicol2001document}
+Gavin Nicol, Lauren Wood, Mike Champion, and Steve Byrne.
+\newblock Document object model (dom) level 3 core specification.
+\newblock {\em W3C Working Draft}, 13:1--146, 2001.
+
+\bibitem{raggett1999html}
+Dave Raggett, Arnaud Le~Hors, Ian Jacobs, et~al.
+\newblock Html 4.01 specification.
+\newblock {\em W3C recommendation}, 24, 1999.
+
+\bibitem{sebesta2008programming}
+Robert~W Sebesta.
+\newblock {\em Programming the world wide web}.
+\newblock Pearson Addison Wesley, 2008.
+
+\bibitem{taivalsaari2011web}
+Antero Taivalsaari and Tommi Mikkonen.
+\newblock The web as an application platform: The saga continues.
+\newblock In {\em Software Engineering and Advanced Applications (SEAA), 2011
+  37th EUROMICRO Conference on}, pages 170--174. IEEE, 2011.
+
+\bibitem{wang2009designing}
+Ge~Wang.
+\newblock Designing smule?s ocarina: The iphone?s magic flute.
+\newblock In {\em Proceedings of the International Conference on New Interfaces
+  for Musical Expression}, pages 303--307, 2009.
+
+\end{thebibliography}

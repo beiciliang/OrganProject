@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}
+\contentsline {section}{\numberline {1.1}Motivation}{5}
+\contentsline {section}{\numberline {1.2}Research questions}{7}
+\contentsline {section}{\numberline {1.3}Summary of the structure of the report}{7}
+\contentsline {chapter}{\numberline {2}Related work and theoretical context}{9}
+\contentsline {section}{\numberline {2.1}Digital technologies on music applications}{9}
+\contentsline {section}{\numberline {2.2}Web application design}{11}
+\contentsline {section}{\numberline {2.3}Web technologies}{13}
+\contentsline {subsection}{\numberline {2.3.1}HTML}{13}
+\contentsline {subsection}{\numberline {2.3.2}CSS}{15}
+\contentsline {subsection}{\numberline {2.3.3}JavaScript}{16}
+\contentsline {chapter}{\numberline {3}Web app development}{19}
+\contentsline {section}{\numberline {3.1}System requirements}{19}
+\contentsline {section}{\numberline {3.2}System specifications}{21}
+\contentsline {subsection}{\numberline {3.2.1}The platform chosen}{21}
+\contentsline {subsection}{\numberline {3.2.2}Web audio API}{22}
+\contentsline {subsection}{\numberline {3.2.3}JavaScript Libraries}{25}
+\contentsline {section}{\numberline {3.3}Prototype}{25}
+\contentsline {subsection}{\numberline {3.3.1}Paper prototype}{25}
+\contentsline {subsection}{\numberline {3.3.2}Design process}{25}
+\contentsline {subsection}{\numberline {3.3.3}Implementation}{25}
+\contentsline {subsection}{\numberline {3.3.4}Testing}{25}

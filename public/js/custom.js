@@ -32,7 +32,12 @@
 
 							$('#gate, figcaption').on( 'click', function() {
 
-								slitslider.next();								
+								slitslider.next();	
+								$('.rdolist').removeClass("checked");
+					            $('.rdolist').addClass("unchecked");
+					            $('.rdobox').removeClass("checked");
+					            $('.rdobox').addClass("unchecked");
+					            $(".check-image").css("background", "url(images/input-unchecked.png)");							
 
 							    // initialize of labels
 							    $('.labels a#label1').fadeIn(300).effect('bounce', { times:1 }, 100, function() {
@@ -970,6 +975,15 @@
 						                    var keyNo = ev.which,
 						                    	$key = $('[data-key="' + selectTimbre + '_' + keyNo + '"]'), 
 							        			note = $key.attr("data-note");
+
+							        		if (keyNo == 59) {
+							        			$key = $('[data-key="' + selectTimbre + '_' + 186 + '"]'), 
+							        			note = $key.attr("data-note");
+							        		}
+
+							        		if (keyNo == 222) {
+							        			ev.preventDefault(); // Prevent the default action
+							        		}
 
 									        note && ("keydown" == ev.type ? 
 									        	lockEvent[keyNo] || (

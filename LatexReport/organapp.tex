@@ -1,0 +1,102 @@
+% Example LaTex report
+% commented lines start with percent signs -> %
+
+% set the kind of document are we writing:
+\documentclass[oneside,12pt,a4paper]{report}
+
+% pages printed on one side only
+% body text in 11pt font
+% using A4 paper 
+% document is of type 'report'
+
+% include necessary LaTex packages:
+
+\usepackage{epsfig}		% handles eps figures	
+\usepackage{amsmath}		% handles maths for equations
+\usepackage{amsfonts}	% handles fonts
+\usepackage{fancyhdr}	% allows special headers
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{tabularx}
+\renewcommand{\baselinestretch}{1.4}
+
+\makeatletter
+\newcommand\ackname{Acknowledgements}
+\if@titlepage
+  \newenvironment{acknowledgements}{%
+      \titlepage
+      \null\vfil
+      \@beginparpenalty\@lowpenalty
+      \begin{center}%
+        \bfseries \ackname
+        \@endparpenalty\@M
+      \end{center}}%
+     {\par\vfil\null\endtitlepage}
+\else
+  \newenvironment{acknowledgements}{%
+      \if@twocolumn
+        \section*{\abstractname}%
+      \else
+        \small
+        \begin{center}%
+          {\bfseries \ackname\vspace{-.5em}\vspace{\z@}}%
+        \end{center}%
+        \quotation
+      \fi}
+      {\if@twocolumn\else\endquotation\fi}
+\fi
+\makeatother
+
+
+% **** Title page details **** 
+\title{\textbf{The Organ Web App}}
+
+\author{\Large{Beici Liang}\\
+\\
+\Large{Supervisor: Gyorgy Fazekas} \\ 
+\\
+School of Electronic Engineering and Computer Science\\ 
+Media and Arts Technology Programme\\
+Queen Mary University of London}
+
+\date{Project Report August 2015}
+% *****************************
+
+% Begin the document:
+\begin{document} 
+
+\maketitle % Generate a title page from the title page details above
+
+\begin{abstract}  % abstract goes in here
+\input{abstract} % include the file abstract.tex
+\end{abstract}
+
+\begin{acknowledgements} % acknowledgements go in here
+\input{acknowledgements} % include the file acknowledgements.tex
+\end{acknowledgements}
+
+\newpage % start a new page
+
+\tableofcontents 	% generate table of contents
+\listoffigures		% generate list of figures
+\listoftables		% generate list of tables
+
+% Chapter of introduction:
+\input{introduction} % This line includes the tex file introduction.tex
+
+% Chapter of related work and theoretical context:
+\input{relatedWork} % includes the tex file relatedWork.tex
+
+% Chapter of development
+\input{development} % includes the tex file development.tex
+
+% Appendix command - All chapters after this are appendices
+%\appendix
+%\input{appendix} % includes the tex file appendix.tex
+
+\bibliographystyle{plain}
+\bibliography{organapp}
+
+\end{document}

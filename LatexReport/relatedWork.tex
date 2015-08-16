@@ -1,0 +1,140 @@
+
+\chapter{Related work and theoretical context}
+
+\section{Digital technologies on music applications}
+
+With the rapid development of digital technologies, the way of making, sharing, teaching and learning music has been fundamentally changed in the last decade \cite{gouzouasis2011future}. This section will present a brief overview of the impacts of digital innovations, introduce the functions of new music applications, and determine their possible uses for music learning context.
+
+There are many ways of contributing to create new mode of music production, music promotion and music learning. Especially with the rise of the participatory Internet, known as Web 2.0, and the popularisation of portable digital devices such as laptops, smart phones and tablets, a big amount of digital applications related to music have emerged in order to build a broader music learning  environment. Due to the participatory websites such as YouTube, Vimeo and Facebook, people's access to music has changed, which blurs the boundary between creator and learner as users of all ages are able to post their own music and learn from others. Therefore music learning enabled with Web 2.0 is often recognised as learner initiated, learner created, learner directed, and learner distributed \cite{london2011unlocking}. Along with the development of digital technologies, the music innovations will continue to redefine the concepts of music making, sharing, teaching and learning.
+
+Music software programmes operated on digital devices, referred to as \enquote{apps} (applications), evoke new ways to music practice and develop all the time. Commonly the music apps can be categorised as the following four kinds \cite{gouzouasis2011future}:
+\begin{enumerate}
+\item music education tools with scores and lessons provided;
+\item music toys and games;
+\item music tools that can be used to tune the instruments, as well as record and edit pieces;
+\item virtual music instruments.
+\end{enumerate}
+
+In every platform, there are applications as combined with new digital technologies that provide creative ways for turning music learning into interesting settings. In addition, these applications can be learned straightforwardly and easy to use. According to the above classification, the following music apps are introduced as examples. As a matter of fact, numerous applications can even cover all the functions mentioned in the four categories. 
+
+\emph{The Orchestra} \cite{theOrchestra} is an iPad app that provide enable users to experience classical music with features including video, a synchronised core and comment by the conductor. Users can also understand how instruments work in the orchestra and gain insights into the inner workings of the Philharmonia Orchestra.
+
+\emph{Taiko no Tatsujin} \cite{taiko} is a rhythm game where players match up beats to on screen icons. Different symbols indicate the user what to hit and when. It provides users with a variety of platforms. For mobile version, fingers are used for drumming.
+
+\emph{Audiotool} \cite{audiotool} is a web app powered by Flash. It is an online music production studio that allows users produce their own music in the browser by connecting virtual devices, such as drum machines and synths. Different instruments and sound effects are also available in order to create a satisfactory track which can be promoted to different platforms.
+
+\emph{Ocarina} \cite{wang2009designing} is one of the earliest mobile-musical apps for iPhone that presents a flute-like physical interaction using microphone input, multi-touch, and accelerometers. It also provides a social interaction that allows users to listen in to others playing Ocarina around the world using GPS location and cloud-based networking.
+
+Whether the applications are developed on web, iOS, Android, or some other platforms, digital technologies have changed the music practice. As the web application can relieve the developer of the responsibility of building a client for a specific type of computer or a specific operating system, I built a web application for the project. Design issues specific to the web application under development will be discussed in the later section.
+
+\section{Web application design}
+
+The web is no longer just a way of presenting information on a computer screen. With the development of the basic building blocks of web technology, HTML, CSS and JavaScript, a wide variety of client systems are able to use information from the web, which makes the web application run like native installed applications on any platform. Therefore, the engineers can save time as there is no need for rebuilding the app for different platforms, and launch products and features as soon as they are ready. Moreover, users are able to get the latest version of the app just by hitting refresh. The cost savings are substantial \cite{taivalsaari2011web}.
+
+Though the web application uses the same network protocols as the desktop web environment, it's inadequate to think of a web application as a website. There are some considerations listed as follows when designing the web application so as to allow the developer create only one file but provide different experiences on a variety of devices, including desktops, smart phones, tablets and so on \cite{firtman2010programming}.
+
+\begin{enumerate}
+\item Multiple views
+
+The lack of a browser's toolbar for navigation means the back feature should be implemented by the developer. Generally there is only one HTML file and then using JavaScript will change the view. Therefore, tab navigation at top or bottom, top toolbar for going back, or key and touch paginating for sequential views can be used as multi view mechanisms.
+
+\item Layout
+
+The layout can be different even with a single platform. A fixed or a liquid design should be decided to support different screen sizes, orientation modes, and physical screen dimensions.
+
+\item Input method
+
+Since there are different input methods, such as touch, keyboards and pads, the web application need to support all these input methods. One way of handling touch devices is to change the layout for larger components.
+
+\item One-view application
+
+One-view application is commonly used for financial, weather, news and some other indicator applications, which have an information view and maybe a second view for explaining the details of the main view. One-view applications can be easy to create but feature powerful functions.
+
+\item Multiplatform application
+
+All the code can be delivered from the server in order to let user receive the latest version of the web application without intervention. Therefore, one way to reuse the code for all the platforms is to define a class using JavaScript, which is a dynamic language, for the \verb|body| tag that will be used by the CSS file to define different styles for platform variants. Another approach is to have various CSS files for each platform.
+\end{enumerate}
+
+Understanding the architectural and usability concepts is critical to design the web application for a variety of platforms. Main supported technologies will be discussed in the next section for better understanding the development process of this project.
+
+\section{Web technologies}
+
+As it has been mentioned above, the web apps are normally built using HTML, CSS and JavaScript. They are regarded as client-side languages used in web programming. How to create and process content in a web app by these languages will be introduced in the later three subsections respectively. Using them as a base, the detailed technical issues of The Organ Web App development will be discussed in the next chapter.
+
+\subsection{HTML}
+
+HTML (the Hypertext Markup Language) \cite{raggett1999html} is the language for describing the structure of pages, which allows the format of documents to be viewed on screens. The formatting codes are all written in plain text. One of the most important features of web documents is that they contain hyperlinks which let users navigate to other documents.
+
+The fundamental syntactic units of HTML are called \emph{tags}. A tag is a format name surrounded by angle brackets. End tags which switch a format off also contain a forward slash. With different kinds of tags, HTML can publish documents with headings, text, tables, lists, images, etc \cite{sebesta2008programming}. For example, the text surrounded by a h1 beginning tag and a end tag will be set to the style h1.
+\begin{verbatim}
+<h1> Text in an h1 style. </h1>
+\end{verbatim}
+
+All HTML documents follow the same basic structure. They have a head which contains control information used by the browser and server and a large body. The body contains the content that displays on the screen and tags which control how that content is formatted by the browser. The basic document is:
+\begin{verbatim}
+<html>
+    <head>
+        <title>A HTML document for example</title>
+    </head>
+	
+    <body>
+        <h1> This is a heading. </h1>
+        <p> This is a paragraph. </p>
+    </body>
+</html>
+\end{verbatim}
+The entire document is surrounded by \verb|<html> ... </html>| so that the software can know it is now processing HTML. Documents stored with a \verb|.html| extension to their file name are automatically treated as HTML files. The head of the document can be used to import stylesheets, files containing scripting code, or information about the document itself which is called \emph{metadata}. The body contains the content that displays on the screen and tags which control how that content is formatted by the browser. 
+
+\subsection{CSS}
+CSS (Cascading Style Sheets) \cite{bos1998cascading} is the language for describing the layout of pages, which includes positioning on the page and the choice of fonts, colours, borders. backgrounds and so on. In particular, the page may be viewed on different platforms with images, text, tables, or other elements in a variety of styles. Straightforward HTML is not able to cope with this diversity, however, CSS comprised of a set of formatting instructions can apply styles to the HTML document. Generally the following three mechanisms are used \cite{chapman2007web}:
+\begin{enumerate}
+\item Inline - the style can be defined within the basic HTML tag. This inline styling changes the text colour of a single heading:
+\begin{verbatim}
+<h1 style="color:blue">This is a Blue Heading</h1>
+\end{verbatim}
+\item Internal - the style can be defined in the \verb|<head>| section and applied to the whole document. This internal styling changes the text colour of all the paragraphs:
+\begin{verbatim}
+<html>
+    <head>
+        <style>
+            p {colour: green}
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+     </body>
+</html>
+\end{verbatim}
+\item External - the style can be defined in external files called stylesheets which can then be used in any documents by including the stylesheet via a URI. This external styling changes the style which are declared in the external \verb|styles.css| file:
+\begin{verbatim}
+<html>
+    <head>
+        <style>
+            <link rel="stylesheet" href="styles.css">
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+     </body>
+</html>
+\end{verbatim}
+\end{enumerate}
+
+\subsection{JavaScript}
+JavaScript is capable to program at both the server and the client side. However, server-side JavaScript is used less frequently than the client-side. From the client side perspective, JavaScript is a scripting language whose primary uses are to validate from data and to create dynamic HTML documents \cite{goodman2007javascript}.
+
+As button clicks and mouse movements are easily detected, such form elements can be described in JavaScript to make interactions with users. JavaScript can provide feedback to the user according to the computations triggered by the form elements. The input can also be fetched from the user in dialog window when there is no form. JavaScript makes interactions with users easy to program in order to generate new content display dynamically.
+
+Another interesting capability of JavaScript was made possible by the development of the Document Object Model (DOM), which allows JavaScript scripts to access and modify the CSS properties and content of the elements of a displayed HTML document, making formally static documents highly dynamic \cite{nicol2001document}.
+
+The point of the DOM and JavaScript is to allow developers to write scripts that change elements on a page in response to user input, thereby allowing pages to be more responsive and more like applications. There are three basic principles that should be observed in order to use JavaScript sensibly \cite{bates2002web}.
+
+\emph{Pages with scripts should degrade gracefully}. That is they should still display acceptably, present all their information and provide all their services, even if scripting is not supported or is disabled in a user's browser.
+
+Graceful degradation can more easily be achieved by observing the second principle: \emph{behaviour should be separated from content and structure}. This is sometimes called \emph{unobtrusive scripting}. It is emphasised that content and structure should be separated from appearance. This is achieved using stylesheets, which are connected to page elements using \verb|class| and \verb|id| attributes, without otherwise interfering with the markup. Scripts should be similarly attached to a page without interfering with the markup, and \verb|class| and \verb|id| attributes can be used here to connect scripted actions with elements of the page, in a way that it will described in details in the next chapter.
+
+The third principle should hardly need stating, but it is frequently neglected: \emph{scripts should work correctly}. This implies that they must be thoroughly tested, and analysed to demonstrate their correctness. Ideally, scripts should work correctly in all browsers, but because of the legacy of incompatible scripting language implementations and object models, it is difficult to guarantee that every script will work in all older browsers. It is better to insist that scripts work in all browsers that correctly implement the DOM and JavaScript standards, and aim for graceful degradation in others. Basically, this means treating non-standard browsers as if they didn't implement scripting at all.
+
+
