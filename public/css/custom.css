@@ -149,7 +149,7 @@ text-decoration:underline;
     bottom: 50%;
     margin: 0 0 -200px -300px;
     z-index: 10;
-    overflow: scroll;
+    overflow: auto;
     
 }
 
@@ -307,7 +307,7 @@ text-decoration:underline;
     bottom: 50%;
     margin: 0 0 -200px -300px;
     z-index: 10;
-    overflow: scroll;
+    overflow: auto;
     
 }
 

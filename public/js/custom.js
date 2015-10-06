@@ -507,7 +507,10 @@
 
 						    		//Timbre 1
 						            "1_1C": new Howl({
-						                urls: [ "../media/1_1C.mp3" ],
+						                urls: [ "../media/1_1C.wav" ]
+						            }),
+						            "1_1Cr": new Howl({
+						            	urls: ["../media/1_1Cr.wav"]
 						            }),
 						            "1_1Cs": new Howl({
 						                urls: [ "../media/1_1Cs.mp3" ]
@@ -973,8 +976,9 @@
         								$(window).bind("keydown keyup", function(ev) {
 						       
 						                    var keyNo = ev.which,
-						                    	$key = $('[data-key="' + selectTimbre + '_' + keyNo + '"]'), 
+						                    	$key = $('[data-key="' + selectTimbre + '_' + keyNo + '"]'),
 							        			note = $key.attr("data-note");
+							        			fadeInOver = false;
 
 							        		if (keyNo == 59) {
 							        			$key = $('[data-key="' + selectTimbre + '_' + 186 + '"]'), 
@@ -985,34 +989,42 @@
 							        			ev.preventDefault(); // Prevent the default action
 							        		}
 
-									        note && ("keydown" == ev.type ? 
-									        	lockEvent[keyNo] || (
-									        		notes[note].play(), 
-									        		lockEvent[keyNo] = !0, 
-									        		$key.addClass("active"), 
-									        		$key.parent().addClass("active")) 
-									        	: 
-									        	"keyup" == ev.type && (
-									        		lockEvent[keyNo] = !1, 
-									        		$key.removeClass("active"), 
-									        		$key.parent().removeClass("active"))
-							        		);
+							   
+
+									        if(note){
+									        if("keydown" == ev.type){
+									        	if(!lockEvent[keyNo]){
+									        		notes[note].loop(true);
+									        		notes[note].play();
+									        		notes[note].fadeIn(1, 1200, function(){fadeInOver = true;});
+									        		lockEvent[keyNo] = !0;
+									        		$key.addClass("active");
+									        		$key.parent().addClass("active");
+									        	}
+									        }
+									        else{
+									        	if("keyup"==ev.type){
+									        		if(fadeInOver){
+									        			notes[note].fade(1, 0, 800);
+									        		}
+													else{
+														setTimeout(function(){notes[note].fade(1, 0, 800);},1000);
+														fadeInOver = true;
+													}
+													lockEvent[keyNo] = !1;
+													$key.removeClass("active");
+													$key.parent().removeClass("active");
+									        	}
+									        }
+
+									        }
+									    	
+									        
 						        		});
 
 						            });
 
-						        } else {
-						            $(".chkbox").click(function () {
-						                
-						                if ($(this).prev().prop("checked") == true) {
-						                    $(this).prev().removeAttr("checked");
-						                }
-						                else {
-						                    $(this).prev().prop("checked", "checked");
-						                }
-						                rdochecked(tag);
-						            });
-						        }
+						        } 
     						};
         
 					        function rdochecked(tag) {
@@ -1034,12 +1046,23 @@
         					$(".rdolist").labelauty("rdolist", "rdo");
 
         					
-
 						    $(".key > span").mousedown(function() {
 						        var me = $(this), 
 						        	noteClick = me.attr("data-note");
-						        notes[noteClick].play();
+						        	fadeInOver = false;
+
+						        notes[noteClick].loop(true);
+								notes[noteClick].play();
+								notes[noteClick].fadeIn(1, 1200, function(){fadeInOver = true;});
+
+								me.mouseup(function(){
+									if(fadeInOver){notes[noteClick].fade(1, 0, 800);}
+									else{setTimeout(function(){notes[noteClick].fade(1, 0, 800);},1000);}
+									
+								});
+
 						    });
+
         				       																	
 						};
 
