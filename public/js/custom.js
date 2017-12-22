@@ -987,43 +987,36 @@
 
 							        		if (keyNo == 222) {
 							        			ev.preventDefault(); // Prevent the default action
-							        		}
-
-							   
+							        		}						   
 
 									        if(note){
-									        if("keydown" == ev.type){
-									        	if(!lockEvent[keyNo]){
-									        		notes[note].loop(true);
-									        		notes[note].play();
-									        		notes[note].fadeIn(1, 1200, function(){fadeInOver = true;});
-									        		lockEvent[keyNo] = !0;
-									        		$key.addClass("active");
-									        		$key.parent().addClass("active");
-									        	}
-									        }
-									        else{
-									        	if("keyup"==ev.type){
-									        		if(fadeInOver){
-									        			notes[note].fade(1, 0, 800);
+									        	if("keydown" == ev.type){
+									        		if(!lockEvent[keyNo]){
+									        			notes[note].loop(true);
+									        			notes[note].play();
+									        			notes[note].fadeIn(1, 1200, function(){fadeInOver = true;});
+									        			lockEvent[keyNo] = !0;
+									        			$key.addClass("active");
+									        			$key.parent().addClass("active");
 									        		}
-													else{
-														setTimeout(function(){notes[note].fade(1, 0, 800);},1000);
-														fadeInOver = true;
-													}
-													lockEvent[keyNo] = !1;
-													$key.removeClass("active");
-													$key.parent().removeClass("active");
 									        	}
-									        }
-
-									        }
-									    	
-									        
+									        	else{
+									        		if("keyup"==ev.type){
+									        			if(fadeInOver){
+									        				notes[note].fade(1, 0, 800);
+									        			}
+														else{
+															setTimeout(function(){notes[note].fade(1, 0, 800);},1000);
+															fadeInOver = true;
+														}
+														lockEvent[keyNo] = !1;
+														$key.removeClass("active");
+														$key.parent().removeClass("active");
+									        		}
+									        	}
+									        }									    										        
 						        		});
-
 						            });
-
 						        } 
     						};
         
